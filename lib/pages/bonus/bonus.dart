@@ -2,14 +2,9 @@ import 'package:flutter/material.dart';
 
 int MAX_SCORE = 10;
 
-class Bonus extends StatefulWidget {
+class Bonus extends StatelessWidget {
   const Bonus({super.key});
 
-  @override
-  State<Bonus> createState() => _BonusState();
-}
-
-class _BonusState extends State<Bonus> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

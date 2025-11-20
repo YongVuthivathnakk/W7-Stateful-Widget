@@ -16,7 +16,23 @@ class _Exercise2State extends State<Exercise2> {
         backgroundColor: Colors.blue,
         title: const Text("Favorite cards"),
       ),
-      body: Column(children: [FavoriteCard(), FavoriteCard(), FavoriteCard()]),
+      body: Column(
+        children: [
+          FavoriteCard(
+            title: "I Got a New Car",
+            description: "A new car have dropped so I bought it.",
+          ),
+          FavoriteCard(
+            title: "I Love Cat",
+            description:
+                "Cat is my favorite animal so i make it as my pet called Muhamad Sombul",
+          ),
+          FavoriteCard(
+            title: "A Dog Just Bit Me",
+            description: "I have to get a vaccine.",
+          ),
+        ],
+      ),
     );
   }
 }
@@ -24,7 +40,14 @@ class _Exercise2State extends State<Exercise2> {
 // =========== Card =============
 
 class FavoriteCard extends StatefulWidget {
-  const FavoriteCard({super.key});
+  final String title;
+  final String description;
+
+  const FavoriteCard({
+    super.key,
+    required this.title,
+    required this.description,
+  });
 
   @override
   State<FavoriteCard> createState() => _FavoriteCardState();
